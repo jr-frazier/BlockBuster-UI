@@ -1,0 +1,1 @@
+export const Divider = () => <div className="w-full rounded-full h-[5px] bg-blue-900 my-4"/>
