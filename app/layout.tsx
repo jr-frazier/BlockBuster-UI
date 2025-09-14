@@ -4,6 +4,7 @@ import "./globals.css";
 import SidebarMenu from "@/components/layout/SidebarMenu";
 import NavBar from "@/components/layout/NavBar";
 import {BlockBusterBall} from "@/components/layout/BlockBusterBall";
+import QueryProvider from "@/components/QueryProvider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -28,6 +29,7 @@ export default function RootLayout({
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
+
     return (
         <html lang="en">
         <body className="h-screen w-screen flex">
@@ -41,7 +43,9 @@ export default function RootLayout({
 
             {/* Main Body */}
             <main className="flex-1 p-6  overflow-auto">
-                {children}
+                <QueryProvider>
+                    {children}
+                </QueryProvider>
             </main>
         </div>
         </body>

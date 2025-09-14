@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MovieDisplay from "@/components/dashboard/MovieDisplay";
 
 export default function Home() {
     return (
@@ -6,6 +7,7 @@ export default function Home() {
             <h1>Hello World</h1>
             <Image src="/movies/top_gun.jpg" width={100} height={100}
                    alt="Picture of the author"/>
+            <MovieDisplay/>
         </div>
     );
 }
