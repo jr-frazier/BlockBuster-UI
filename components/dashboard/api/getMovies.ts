@@ -1,5 +1,6 @@
-export const getMovies = async () => {
-    const response = await fetch("http://localhost:8000/movies/?page=1&size=50")
+export const getMovies = async (genre: string | null) => {
+    const genreParam = genre ? `?movie_genres=${genre}` : ""
+    const response = await fetch(`http://localhost:8000/movies/${genreParam}`)
 
     if (!response.ok) {
         throw new Error("Failed to fetch movies")

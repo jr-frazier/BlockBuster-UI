@@ -42,7 +42,7 @@ export default function RootLayout({
             <NavBar/>
 
             {/* Main Body */}
-            <main className="flex-1 p-6  overflow-auto">
+            <main className="flex-1 p-6 pl-24  overflow-auto">
                 <QueryProvider>
                     {children}
                 </QueryProvider>
