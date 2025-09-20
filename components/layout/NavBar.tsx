@@ -1,3 +1,5 @@
+import NavLink from "@/components/NavLink";
+
 export default function NavBar() {
     return (
         <header
@@ -9,8 +11,16 @@ export default function NavBar() {
                     className="bg-blue-900 text-white rounded-full px-4 cursor-pointer button hover:bg-blue-500">Search
                 </button>
             </div>
-            <h3 className="flex gap-4 font-bold text-2xl tracking-widest">
-                MOVIES
-            </h3>
+            <div className="flex gap-4 items-center">
+                <div className="flex gap-4">
+                    <NavLink link={"/login"} name={"Login"}/>/
+                    <NavLink link={"/signup"} name={"Signup"}/>
+                </div>
+
+                <h3 className="flex gap-4 font-bold text-2xl tracking-widest">
+                    MOVIES
+                </h3>
+            </div>
+
         </header>)
 }
